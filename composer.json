@@ -1,0 +1,22 @@
+{
+    "name": "hb/parfum",
+    "description": "Parfum e-commerce website",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ibrahim",
+            "email": "ibrahimking13@gmail.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "classmap_authoritative": true,
+        "sort-packages": true
+    }
+    }

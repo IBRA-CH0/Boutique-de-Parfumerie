@@ -1,0 +1,466 @@
+/* ============================= */
+/*         STYLES GÉNÉRAUX       */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/*           HEADER              */
+/* ============================= */
+
+header {
+    
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('./public/images/photo couverture.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+     
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 100px;
+    margin-right: 75px;
+}
+
+.header-logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+
+
+/* ============================= */
+/*        NAVIGATION - CATEGORIES */
+/* ============================= */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #28a745; /* Couleur verte pour l'élément actif */
+}
+/* ============================= */
+/*      MENU UTILISATEUR (CONNEXION, DÉCONNEXION, PANIER) */
+/* ============================= */
+
+nav p {
+    font-size: 16px;
+    color: #838383;
+}
+
+nav a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f1f1f1; /* Effet de survol léger */
+    text-decoration: underline;
+}
+
+nav a[href="logout.php"] {
+    color: #dc3545; /* Rouge pour le lien de déconnexion */
+}
+
+nav a[href="logout.php"]:hover {
+    background-color: #f8d7da; /* Rouge plus clair au survol pour la déconnexion */
+}
+
+nav a[href="login.php"] {
+    color: #007bff; /* Bleu pour le lien de connexion */
+}
+
+nav a[href="login.php"]:hover {
+    background-color: #cce5ff; /* Bleu plus clair au survol pour la connexion */
+}
+
+nav a[href="register.php"] {
+    color: #28a745; /* Vert pour le lien d'inscription */
+}
+
+nav a[href="register.php"]:hover {
+    background-color: #d4edda; /* Vert plus clair au survol pour l'inscription */
+}
+
+/* ============================= */
+/*       CONTENEUR PRINCIPAL     */
+/* ============================= */
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ============================= */
+/*          PRODUITS             */
+/* ============================= */
+
+.product {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/*          PRIX                 */
+/* ============================= */
+
+.regular-price {
+    color: #333;
+    text-decoration: line-through;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.promo-price {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.promo-price::before {
+    content: '🔥';
+    margin-right: 5px;
+}
+/* Bouton Ajouter au panier */
+.product form {
+    margin-top: 10px;
+}
+
+.product input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Styles pour la page validation-commande */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 20px;
+    border: none;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 25px;
+    background: #ffffff;
+}
+
+/* Styles des formulaires */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Styles des boutons */
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Styles du récapitulatif */
+.justify-content-between {
+    padding: 10px 0;
+}
+
+hr {
+    border-top: 2px solid #e9ecef;
+    margin: 20px 0;
+}
+
+strong {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+/* Styles pour les icônes */
+.fas {
+    margin-right: 8px;
+}
+
+/* Effets de survol */
+.card:hover .card-header {
+    background: linear-gradient(135deg, #0056b3, #5e00f2);
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation de chargement */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Styles pour les messages d'erreur */
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Style pour le total */
+.total-amount {
+    font-size: 1.25rem;
+    color: #28a745;
+    font-weight: bold;
+}
+/* ============================= */
+/*       FORMULAIRES (LOGIN)     */
+/* ============================= */
+
+form {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+.cart-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-danger {
+    transition: all 0.2s;
+}
+
+.btn-danger:hover {
+    transform: scale(1.05);
+}
+
+.table h5 {
+    margin-bottom: 0.25rem;
+}
+
+.text-muted {
+    font-size: 0.875rem;
+}
+
+/* ============================= */
+/*         PIED DE PAGE          */
+/* ============================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+}
+
